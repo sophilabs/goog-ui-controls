@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<!--
+Copyright 2012 Sophilabs. All Rights Reserved.
+
+Use of this source code is governed by the Apache License, Version 2.0.
+See the COPYING file for details.
+-->
+<head>
+    <title>sophilabs.ui.Rule</title>
+    <meta charset="utf-8">
+    <script src="../../../closure/goog/base.js"></script>
+    <script src="dependencies.js"></script>
+    <script>
+        goog.require('goog.dom');
+        goog.require('goog.ui.Component');
+        goog.require('sophilabs.ui.Rule');
+    </script>
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="../css/rule.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<h1>sophilabs.ui.Rule</h1>
+
+<div id="r-t">
+    <strong>Top Rule</strong>
+    <div id="r1" class="sophilabs-rule" style="width: 200px; height: 20px"></div>
+</div>
+
+<div id="r-b">
+    <strong>Bottom Rule</strong>
+    <div id="r2" class="sophilabs-rule" style="width: 200px; height: 20px"></div>
+</div>
+<script>
+
+    var r1 = new sophilabs.ui.Rule('r1');
+    r1.setOrientation(sophilabs.ui.Rule.Orientation.TOP);
+    r1.setValues([0, 1, 2, 3, 4, 5]);
+    r1.render();
+
+    var r2 = new sophilabs.ui.Rule('r2');
+    r2.setOrientation(sophilabs.ui.Rule.Orientation.BOTTOM);
+    r2.setValues([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    r2.render();
+
+</script>
+</body>
+</html>

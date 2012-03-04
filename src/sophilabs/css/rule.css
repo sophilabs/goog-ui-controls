@@ -1,0 +1,42 @@
+/*
+ * Copyright 2012 Sophilabs. All Rights Reserved.
+ *
+ * Use of this source code is governed by the Apache License, Version 2.0.
+ * See the COPYING file for details.
+ */
+
+.sophilabs-filter-rule {
+    width: 204px;
+    margin: 4px 7px 0 7px;
+}
+.sophilabs-rule-ticks {
+    height: 3px;
+    position: relative;
+}
+.sophilabs-rule-tick {
+    border-left: 1px solid #999;
+    width: 0px;
+    height: 100%;
+    line-height: 0;
+    position: absolute;
+}
+.sophilabs-rule-values {
+    padding: 2px 0px;
+    font-size: 75%;
+    height: 1em;
+    position: relative;
+    font-size: 9px;
+    font-family: arial;
+    color: #999;
+}
+.sophilabs-rule-value {
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    margin:0;
+    padding: 0;
+}
+.sophilabs-rule-inner {
+    left: -50%;
+    position: relative;
+}

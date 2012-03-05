@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<!--
+Copyright 2012 Sophilabs. All Rights Reserved.
+
+Use of this source code is governed by the Apache License, Version 2.0.
+See the COPYING file for details.
+-->
+<head>
+    <title>sophilabs.ui.RangeSlider</title>
+    <meta charset="utf-8">
+    <script src="../../../closure/goog/base.js"></script>
+    <script src="dependencies.js"></script>
+    <script>
+        goog.require('goog.dom');
+        goog.require('goog.ui.Component');
+        goog.require('sophilabs.ui.RangeSlider');
+        goog.require('sophilabs.ui.Rule');
+    </script>
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="../css/rule.css">
+    <link rel="stylesheet" href="../css/range-slider.css">
+    <style>
+
+    </style>
+</head>
+<body>
+<h1>sophilabs.ui.RangeSlider</h1>
+
+<div id="rs-1" class="sophilabs-rangeslider" style="width: 214px; height: 20px" >
+    <div class="sophilabs-rangeslider-line-box">
+        <div class="sophilabs-rangeslider-line"></div>
+    </div> 
+    <div class="sophilabs-rangeslider-value-thumb"></div> 
+    <div class="sophilabs-rangeslider-extent-thumb"></div> 
+</div>
+<div id="rule" class="sophilabs-rule" style="width:200px; height:20px;
+margin-left: 7px; "></div>
+<span id="min">0</span>
+<span id="max">10</span>
+<script>
+    function sliderChanged(event) {
+      goog.dom.getElement('min').innerHTML = rs1.getValue();
+      goog.dom.getElement('max').innerHTML = rs1.getValue() + rs1.getExtent();
+    }
+    
+    var rs1 = new sophilabs.ui.RangeSlider();
+    rs1.setMoveToPointEnabled(true);
+    rs1.setMinimum(0);
+    rs1.setMaximum(10);
+    rs1.setValueAndExtent(0, 10);
+    rs1.decorate(goog.dom.getElement('rs-1'));
+
+    goog.events.listen(rs1, goog.events.EventType.CHANGE, sliderChanged);
+    var r2 = new sophilabs.ui.Rule('rule');
+    r2.setOrientation(sophilabs.ui.Rule.Orientation.BOTTOM);
+    r2.setValues([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    r2.render();
+
+</script>
+</body>
+</html>

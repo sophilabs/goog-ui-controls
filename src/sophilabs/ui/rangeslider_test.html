@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<!--
+Copyright 2012 Sophilabs. All Rights Reserved.
+
+Use of this source code is governed by the Apache License, Version 2.0.
+See the COPYING file for details.
+-->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sophilabs Unit Tests - sophilabs.ui.RangeSlider</title>
+    <script src="../base.js"></script>
+    <script>
+        goog.require('goog.testing.jsunit');
+        goog.require('sophilabs.ui.RangeSlider');
+    </script>
+</head>
+<body>
+<script>
+
+    var rangeSlider;
+
+    function tearDown() {
+        goog.dispose(rangeSlider);
+    }
+
+    function testGetCssClass() {
+        rangeSlider = new sophilabs.ui.RangeSlider();
+    }
+
+</script>
+</body>
+</html>

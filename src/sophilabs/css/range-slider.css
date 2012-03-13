@@ -1,0 +1,48 @@
+/*
+ *  * Copyright 2012 Sophilabs. All Rights Reserved.
+ *   *
+ *    * Use of this source code is governed by the Apache License, Version 2.0.
+ *     * See the COPYING file for details.      
+ */
+.sophilabs-rangeslider:focus {
+  outline: none;
+}
+.sophilabs-rangeslider {
+  position: relative;
+}
+.sophilabs-rangeslider-horizontal {
+  background-color: #fff;
+  position: relative;
+}
+
+.sophilabs-rangeslider-value-thumb, .sophilabs-rangeslider-extent-thumb {
+  background-image: url('../images/rangeslider-thumb.png');
+  position: absolute;
+  overflow: hidden;
+  width: 14px;
+  height: 15px;
+}
+
+.sophilabs-rangeslider-value-thumb:focus, .sophilabs-rangeslider-extent-thumb:focus {
+  background-position: -14px 0;
+  outline: none;
+}
+ 
+.sophilabs-rangeslider-line-box {
+  position: absolute;
+  width: 100%;
+  top: 4px;
+  overflow: hidden;
+  height: 6px;
+}
+
+.sophilabs-rangeslider-line {
+  border: 1px solid #DDD;
+  background-color: #F6F6F6;
+  height: 4px;
+}
+
+.sophilabs-rangeslider:focus .sophilabs-rangeslider-line {
+  border: 1px solid #779d01;
+  background-color: #bde542;
+}
